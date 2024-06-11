@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+  <div class="container">
+    <table>
+    {% for i in range(x)%}
+        <tr class="colum">
+          {% for j in range(y)%}
+          <td class="color{{ (i+j)%2+1 }}"></td>
+          {% endfor %}
+        </tr>
+    {% endfor %}
+      </table>
+  </div>
+</body>
+</html>
